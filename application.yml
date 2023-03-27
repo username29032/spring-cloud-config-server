@@ -1,0 +1,4 @@
+my: 
+  greetings: Hello World from config server
+  list: 
+     values: One, Two, Three, Four 
