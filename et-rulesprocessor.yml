@@ -1,2 +1,4 @@
 my: 
   greetings: Hello World from et rulesprocessor config server
+
+demo.service.profileProp: localExample
