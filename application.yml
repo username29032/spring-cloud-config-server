@@ -1,5 +1,5 @@
 my: 
-  greetings: Hello World from 4 config server
+  greetings: Hello World from webhook config server
   list: 
      values: One, Two, Three, Four 
 
