@@ -1,1 +1,72 @@
-
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_0ov5q8c" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.3.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+  <decision id="Decision_1g88d6k" name="Dish">
+    <decisionTable id="DecisionTable_0fvfm0e" hitPolicy="RULE ORDER">
+      <input id="Input_1" label="Season" biodi:width="192" camunda:inputVariable="season">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text></text>
+        </inputExpression>
+        <inputValues id="UnaryTests_00hyw36">
+          <text>"Fall","Winter","Spring","Summer"</text>
+        </inputValues>
+      </input>
+      <input id="InputClause_11aexq6" label="How Many guests" camunda:inputVariable="noOfGuests">
+        <inputExpression id="LiteralExpression_0ot3t98" typeRef="integer">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" name="Dish" typeRef="string" biodi:width="192" />
+      <rule id="DecisionRule_05rvohz">
+        <inputEntry id="UnaryTests_0jjx8i9">
+          <text>"Winter"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00kn9n7">
+          <text>&lt; 8</text>
+        </inputEntry>
+         <outputEntry id="LiteralExpression_0q75sg9">
+                  <text>"Palak Paneer"</text>
+         </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1kmvhyg">
+        <inputEntry id="UnaryTests_0yx7xj6">
+          <text>"Spring"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1h1x3j9">
+          <text>[5..8]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0q75sg8">
+          <text>"Idli Sambhar"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_027pikv">
+        <inputEntry id="UnaryTests_0eyc29u">
+          <text>"Fall"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14zvdmt">
+          <text>2</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_03msqd8">
+          <text>"XYZ"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_15hvz0x">
+        <inputEntry id="UnaryTests_1rvmt4u">
+          <text>"Fall"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_07jbbrj">
+          <text>&lt;=4</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_03wafhn">
+          <text>"Chole Bhature"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_1g88d6k">
+        <dc:Bounds height="80" width="180" x="160" y="130" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
