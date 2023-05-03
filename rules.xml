@@ -7,7 +7,7 @@
           <text></text>
         </inputExpression>
         <inputValues id="UnaryTests_00hyw36">
-          <text>"Fall","Winter","Spring","Summer"</text>
+          <text>"Fall","Winter222","Spring","Summer"</text>
         </inputValues>
       </input>
       <input id="InputClause_11aexq6" label="How Many guests" camunda:inputVariable="noOfGuests">
@@ -18,7 +18,7 @@
       <output id="Output_1" name="Dish" typeRef="string" biodi:width="192" />
       <rule id="DecisionRule_05rvohz">
         <inputEntry id="UnaryTests_0jjx8i9">
-          <text>"Winter"</text>
+          <text>"Winter222"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_00kn9n7">
           <text>&lt; 8</text>
